@@ -18,6 +18,7 @@
                 padding: 5px;
                 margin-top: 5px;
                 text-transform: capitalize;
+                display: none;
             }
             #result{
                 display: none;
@@ -29,17 +30,17 @@
 <div class="container">
     <div class="formBox">
         <h2>ATM Withdrawal</h2>
-        <h4>Account Balance : 30,000</h4>
+        <h4>Account Balance : 50,000</h4>
         <form id="atm" novalidate>
             <div class="form-group">
                 <div class="form-check-inline">
                     <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="optradio" value="withdraw">Withdraw
+                    <input type="radio" class="form-check-input" name="account_action" value="withdraw" checked="checked">Withdraw
                     </label>
                 </div>
                 <div class="form-check-inline">
                     <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="optradio" value="deposit" checked="checked">Deposit
+                    <input type="radio" class="form-check-input" name="account_action" value="deposit">Deposit
                     </label>
                 </div>
             </div> 
@@ -56,7 +57,7 @@
                 </div>
                 <div class="form-check-inline">
                     <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="account_type" value="creditCard">CreditCard
+                    <input type="radio" class="form-check-input" name="account_type" value="privileged">Privileged
                     </label>
                 </div>
             </div>
@@ -71,6 +72,10 @@
             <h4>Account Balance :  <span id="amountBalance"></span></h4>
             <h4>Withdraw Amount :  <span id="amountEntered"></span></h4>
             <h4>Current Account Balance :  <span id="currentAmountBalance"></span></h4>
+            <h4>Overdraft Account :  <span id="amountOverdraft"></span></h4>            
+        </div>
+        <div class="error" id="error">
+            <h4 id="errorTxt"></h4>
         </div>
     </div>
 </div>
