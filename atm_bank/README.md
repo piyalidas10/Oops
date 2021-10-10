@@ -1,5 +1,9 @@
 # ATM Withdrawal using OOPs concept
 
+![Atm_Transaction_success](success.png)
+
+![Atm_Transaction_fail](error.png)
+
 Suppose we have three different account types, 
 1. one for Saving 
 2. one for Current
