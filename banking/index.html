@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <title>ATM Withdrawal</title>
+        <style>
+            .formBox{
+                max-width: 500px;
+            }
+            .formBox h2{
+                text-align: center;
+            }
+            .error{
+                background-color: #f5dede;
+                color: #a52a2a;
+                padding: 5px;
+                margin-top: 5px;
+                text-transform: capitalize;
+            }
+            #result{
+                display: none;
+            }
+        </style>
+        <script src="bank.js" defer></script>
+    </head>    
+<body>
+<div class="container">
+    <div class="formBox">
+        <h2>ATM Withdrawal</h2>
+        <h4>Account Balance : 30,000</h4>
+        <form id="atm" novalidate>
+            <div class="form-group">
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optradio" value="withdraw">Withdraw
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optradio" value="deposit" checked="checked">Deposit
+                    </label>
+                </div>
+            </div> 
+            <div class="form-group">
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="account_type" value="saving" checked="checked">Saving
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="account_type" value="current">Current
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="account_type" value="creditCard">CreditCard
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Enter Amount</label>
+                <input type="text" class="form-control" id="amount" value="3000"/>
+            </div>            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <div id="result">
+            <h4>Account Balance :  <span id="amountBalance"></span></h4>
+            <h4>Withdraw Amount :  <span id="amountEntered"></span></h4>
+            <h4>Current Account Balance :  <span id="currentAmountBalance"></span></h4>
+        </div>
+    </div>
+</div>
+</body>
+</html>
